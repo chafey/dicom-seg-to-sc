@@ -1,0 +1,16 @@
+{
+  "name": "dicom-seg-to-sc",
+  "version": "1.0.0",
+  "description": "Tool to convert DICOM SEG to Secondary Capture",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js test/fixtures/MonaiSEG.dcm dicomout"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT"
+}
