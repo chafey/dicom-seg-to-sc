@@ -1,3 +1,3 @@
 #!/bin/sh
 rm dicomout/*
-npm start
+time node index.js test/fixtures/MonaiSEG.dcm dicomout

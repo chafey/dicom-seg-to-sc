@@ -4,14 +4,14 @@ const getDICOMValue = require("./getDICOMValue");
 const getSegmentColor = require("./getSegmentColor");
 const createSEGAccessor = require("./createSEGAccessor");
 const secondaryCaptureTemplate = require("./secondaryCaptureTemplate");
-const { DicomMetaDictionary, datasetToBuffer } = dcmjs.data;
+const { DicomMetaDictionary } = dcmjs.data;
 const syncPatientAndStudyAttributes = require("./syncPatientAndStudyAttributes");
 
 const instance = secondaryCaptureTemplate;
 
 const rasterizedImageFrames = [];
 
-const rasterizeSegments = (data, options = {}) => {
+const rasterizeSegments = (data) => {
   syncPatientAndStudyAttributes(instance, data);
 
   const numSegments = data.dict["00620002"].Value.length;
